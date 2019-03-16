@@ -1,0 +1,93 @@
+<script>
+
+var numeric = prompt('Введите число от 0 до 999');
+
+if(numeric == 0){
+	console.log("Ноль гривен");
+}
+else if (numeric > 999){
+	var numeric = prompt('Слишком большое число!\nВведите число от 0 до 999');
+}
+else{
+
+function number_to_words(){
+var letter_1 = ['','сто','двести','триста','четыреста','пятсот','шестьсот','семьсот','восемьсот','девятьсот'];
+if (numeric[1] == 1){
+	var letter_2 = '';
+	var letter_3 = ['десять','одиннадцать','двенадцать','тринадцать','четырнадцать','пятнадцать','шестнадцать','семнадцать','восемнадцать','девятнадцать'];
+} else {
+var letter_2 = ['','','двадцать','тридцать','сорок','пятьдесят','шестьдесят','семьдесят','восемьдесят','девяносто'];
+var letter_3 = ['','одна','две','три','четыре','пять','шесть','семь','восемь','девять'];
+}
+
+if (numeric[2] == 1){var end_letter = 'гривна';}
+else if(numeric[2] >= 2 && numeric[2] <= 4){var end_letter = 'гривны';}
+else{ var end_letter = 'гривен';}
+
+console.log(letter_1[numeric[0]] + ' ' + letter_2[numeric[1]] + ' ' + letter_3[numeric[2]] + ' ' +end_letter);
+}
+number_to_words(numeric);
+
+}
+
+/*
+console.log(numeric);
+var letter_1 = Number(numeric[0]);
+console.log(letter_1);
+var letter_2 = Number(numeric[1]);
+console.log(letter_2);
+var letter_3 = Number(numeric[2]);
+console.log(letter_3);
+
+function letter_number(){
+
+}
+
+function letter_number(){
+	switch (letter_1) {
+		case 1: console.log('Сто'); break;
+		case 2: console.log('Двести'); break;
+		case 3: console.log('Триста'); break;
+		case 4: console.log('Четыреста'); break;
+		case 5: console.log('Пятсот'); break;
+		case 6: console.log('Шестьсот'); break;
+		case 7: console.log('Семьсот'); break;
+		case 8: console.log('Восемьсот'); break;
+		case 9: console.log('Девятсот'); break;
+		case 0: console.log('Ноль'); break;
+	}
+	switch (letter_2) {
+		case 1: console.log('Сто'); break;
+		case 2: console.log('Двадцать'); break;
+		case 3: console.log('Тридцать'); break;
+		case 4: console.log('Сорок'); break;
+		case 5: console.log('Пятдесят'); break;
+		case 6: console.log('Шестдесят'); break;
+		case 7: console.log('Семдесят'); break;
+		case 8: console.log('Восемдесят'); break;
+		case 9: console.log('Девяносто'); break;
+		case 0: console.log(' '); break;
+	}
+	switch (letter_3) {
+		case 1: console.log('Один'); break;
+		case 2: console.log('Два'); break;
+		case 3: console.log('Три'); break;
+		case 4: console.log('Четыре'); break;
+		case 5: console.log('Пять'); break;
+		case 6: console.log('Шесть'); break;
+		case 7: console.log('Семь'); break;
+		case 8: console.log('Восемь'); break;
+		case 9: console.log('Девять'); break;
+		case 0: console.log(' '); break;
+	}
+	if (letter_3 == 1){console.log('гривна');}
+	else if(letter_3 == 2 || letter_3 == 3 || letter_3 === 4){
+		console.log('гривны');
+	}
+	else{console.log('гривен');}
+}
+letter_number();
+*/
+
+
+</script>
