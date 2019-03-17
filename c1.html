@@ -21,10 +21,14 @@ var letter_3 = ['','одна','две','три','четыре','пять','ше�
 }
 
 if (numeric[2] == 1){var end_letter = 'гривна';}
+else if (numeric[1] == 1){var end_letter = 'гривен';}
 else if(numeric[2] >= 2 && numeric[2] <= 4){var end_letter = 'гривны';}
 else{ var end_letter = 'гривен';}
-
+if (letter_2[numeric[1]] != ''){
+	console.log(letter_1[numeric[0]] + ' ' + letter_3[numeric[2]] + ' ' +end_letter);}
+	else{
 console.log(letter_1[numeric[0]] + ' ' + letter_2[numeric[1]] + ' ' + letter_3[numeric[2]] + ' ' +end_letter);
+}
 }
 number_to_words(numeric);
 
