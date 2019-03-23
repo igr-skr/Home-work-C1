@@ -11,7 +11,13 @@ else if (numeric > 999){
 else{
 
 function number_to_words(){
+
 var letter_1 = ['','сто','двести','триста','четыреста','пятсот','шестьсот','семьсот','восемьсот','девятьсот'];
+/*
+if (numeric < 100){
+		letter_1 = '';
+	}
+	*/
 if (numeric[1] == 1){
 	var letter_2 = 0;
 	var letter_3 = ['десять','одиннадцать','двенадцать','тринадцать','четырнадцать','пятнадцать','шестнадцать','семнадцать','восемнадцать','девятнадцать'];
@@ -24,11 +30,13 @@ if (numeric[2] == 1){var end_letter = 'гривна';}
 else if (numeric[1] == 1){var end_letter = 'гривен';}
 else if(numeric[2] >= 2 && numeric[2] <= 4){var end_letter = 'гривны';}
 else{ var end_letter = 'гривен';}
-if (letter_2[numeric[1]] != ''){
+
+/*if (letter_2[numeric[1]] != ''){
 	console.log(letter_1[numeric[0]] + ' ' + letter_3[numeric[2]] + ' ' +end_letter);}
-	else{
+	//else{*/
 console.log(letter_1[numeric[0]] + ' ' + letter_2[numeric[1]] + ' ' + letter_3[numeric[2]] + ' ' +end_letter);
-}
+//}
+
 }
 number_to_words(numeric);
 
